@@ -9,5 +9,5 @@ steps:
 
 - name: gcr.io/cloud-builders/gcloud
   id: updating-mig
-  args: ['compute', 'instance-groups', 'managed', 'rolling-action', 'start-update', '--version=template=instance-template-$BUILD_ID', '--zone=us-central1-a', '--type=proactive', '--project=learning-project-125487']
+  args: ['compute', 'instance-groups', 'managed', 'rolling-action', 'start-update', 'mig-1', '--version=template=instance-template-$BUILD_ID', '--zone=us-central1-a', '--type=proactive', '--project=learning-project-125487']
  

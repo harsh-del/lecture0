@@ -1,7 +1,7 @@
 steps:
 - name: gcr.io/cloud-builders/gcloud
   id: creating-instance-template
-  args: ['compute', 'instance-templates', 'create', 'instance-template-$BUILD_ID', '--project=learning-project-125487', '--machine-type=n1-standard-1', '--metadata=startup-script=sudo apt install git apache2 -y && sudo git clone https://github.com/harsh-del/lecture0.git && sudo cp lecture0/* /var/www/html/', '--tags=http-server,https-server']
+  args: ['compute', 'instance-templates', 'create', 'web-inst-temp-$BUILD_ID', '--project=learning-project-125487', '--machine-type=n1-standard-1', '--metadata=startup-script=sudo apt install git apache2 -y && sudo git clone https://github.com/harsh-del/lecture0.git && sudo cp lecture0/* /var/www/html/', '--tags=http-server,https-server']
 
 - name: gcr.io/cloud-builders/gcloud
   id: wait-until-stable
